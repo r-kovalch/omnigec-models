@@ -33,17 +33,17 @@ LANG_TO_CODE: dict[str, str] = {
 }
 
 LANG_CODE_TO_TOKEN = {
-    "cs": "<lang_cs>",
-    "en": "<lang_en>",
-    "et": "<lang_et>",
-    "de": "<lang_de>",
-    "el": "<lang_el>",
-    "is": "<lang_is>",
-    "it": "<lang_it>",
-    "lv": "<lang_lv>",
-    "sl": "<lang_sl>",
-    "sv": "<lang_sv>",
-    "uk": "<lang_uk>"
+    "cs": "<|LANG_CS|>",
+    "en": "<|LANG_EN|>",
+    "et": "<|LANG_ET|>",
+    "de": "<|LANG_DE|>",
+    "el": "<|LANG_EL|>",
+    "is": "<|LANG_IS|>",
+    "it": "<|LANG_IT|>",
+    "lv": "<|LANG_LV|>",
+    "sl": "<|LANG_SL|>",
+    "sv": "<|LANG_SV|>",
+    "uk": "<|LANG_UK|>",
 }
 
 TOP_META = [

@@ -29,6 +29,7 @@ training:
   save_total_limit: 3
   load_best_model_at_end: true
   eval_steps: 25
+  save_total_limit: 2
 early_stopping:
   early_stopping_patience: 75
 lora:

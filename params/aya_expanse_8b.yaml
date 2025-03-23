@@ -26,10 +26,9 @@ training:
   save_strategy: "steps"
   metric_for_best_model: "eval_loss"
   greater_is_better: false
-  save_total_limit: 3
+  save_total_limit: 2
   load_best_model_at_end: true
   eval_steps: 25
-  save_total_limit: 2
 early_stopping:
   early_stopping_patience: 75
 lora:

@@ -5,11 +5,11 @@ baseline:
   max_new_tokens: 700
 training:
   num_train_epochs: 12
-  per_device_train_batch_size: 7
+  per_device_train_batch_size: 4
   per_device_eval_batch_size: 2
   gradient_accumulation_steps: 8
   gradient_checkpointing: true
-  optim: "paged_adamw_32bit"
+  optim: "adamw_torch_fused"
   save_steps: 100
   logging_steps: 10
   learning_rate: 3e-5
@@ -17,7 +17,7 @@ training:
   max_grad_norm: 1.0
   fp16: false
   bf16: true
-  warmup_steps: 50
+  warmup_steps: 70
   group_by_length: false
   lr_scheduler_type: "cosine"
   report_to: "wandb"
@@ -29,16 +29,13 @@ training:
   load_best_model_at_end: true
   eval_steps: 25
 early_stopping:
-  early_stopping_patience: 75
+  early_stopping_patience: 200
 lora:
   lora_alpha: 128
   r: 64
   bias: "none"
   task_type: "CAUSAL_LM"
-  target_modules:
-  - "q_proj"
-  - "v_proj"
-  - "k_proj"
-  - "o_proj"
-  - "gate_proj"
-  - "up_proj"
+  target_modules: "all-linear"
+  modules_to_save:
+    - "lm_head"
+    - "embed_tokens"

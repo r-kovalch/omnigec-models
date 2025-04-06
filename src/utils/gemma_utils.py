@@ -12,6 +12,6 @@ def formatting_prompts_func(example):
     instruction = prompt_template.format(original_text=user_input)
     target = example['target']
 
-    text = f"<start_of_turn>user\n{language_token}{instruction}<end_of_turn>\n<start_of_turn>model\n{target}"
+    text = f"<start_of_turn>user\n{language_token}{instruction}<end_of_turn>\n<start_of_turn>model\n{target}<end_of_turn>\n"
 
     return text

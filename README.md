@@ -137,5 +137,5 @@ TBD
 
 ## Notes
 
-- For details on data, refer to omnigec-data repository: https://github.com/r-kovalch/omnigec-data
+- For details on data, refer to the omnigec-data repository: https://github.com/r-kovalch/omnigec-data
 

@@ -1,0 +1,44 @@
+# common
+numpy>=1.24
+pandas>=2.0
+tqdm>=4.66
+omegaconf>=2.3
+PyYAML>=6.0
+
+# aya_expanse_8b (QLoRA notebooks)
+torch>=2.2
+transformers>=4.40
+datasets>=2.19
+evaluate>=0.4
+peft>=0.10
+trl>=0.8
+bitsandbytes>=0.43
+huggingface_hub>=0.23
+wandb>=0.17
+
+# gemma_3_12b (QLoRA notebooks)
+# — inherits the same stack as Aya
+# (listed again for quick grep‑by‑folder)
+torch
+transformers
+datasets
+evaluate
+peft
+trl
+bitsandbytes
+huggingface_hub
+wandb
+
+# gemma_3_4b (case study)
+# identical deps; kept here for symmetry
+torch
+transformers
+datasets
+peft
+bitsandbytes
+
+# src utilities
+pydantic>=1.10
+syntok>=1.4
+wtpsplit>=0.1
+langchain-core>=0.1.25
